@@ -75,5 +75,51 @@ let funcReturnString = ():string=>{
     return "Mohit"
 }
 
+let multiple = (num: number):number=>{
+    return num*2;
+}
+
+let multiple2 = (num: number)=>{
+    return num*2;
+}
+
+let multiple3 = (num: number):void=>{
+    // do something
+}
+
+let sum = (num1:number,num2:number,another?:number)=>{
+    return num1+num2
+}
+
+// TYPE ALIASES
+type UserType = {
+    username: string;
+    age: number;
+    phone?: string
+}
+
+let betterFunc = (user:UserType)=>{
+    console.log(user.age);
+}
+type myFunc = (a:number, b:number)=> void
+
+let write: myFunc = (num,str)=>{
+    console.log(num+"times"+str)
+}
+
+type UserType2 = {
+    username: string;
+    age: number;
+    phone?: string;
+    theme: "dark" | "light";
+}
+
+// INTERFACES
+interface IUser {
+    
+}
+
+
+
 
 
