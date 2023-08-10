@@ -116,8 +116,22 @@ type UserType2 = {
 
 // INTERFACES
 interface IUser {
-    
+    username: string;
+    email: string;
+    age: number;
 }
+
+interface IEmployee extends IUser{
+    employeedId: number;
+}
+
+const emp : IEmployee = {
+    username: "Mohit",
+    email: "dfg",
+    age: 20,
+    employeedId: 1
+}
+
 
 
 
