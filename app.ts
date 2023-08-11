@@ -132,8 +132,49 @@ const emp : IEmployee = {
     employeedId: 1
 }
 
+// Generics
+interface IAuthor{
+    id: number
+    username: string
+}
+
+interface ICat{
+    id: number
+    title: string
+}
+
+interface IPost {
+    id: number
+    title: string
+    desc: string
+    extra: IAuthor[] | ICat[]
+}
+
+interface IPostBetter<T> {
+    id: number
+    title: string
+    desc: string
+    extra: T[]
+}
 
 
+const testME: IPostBetter<String> = {
+    id: 1,
+    title: "HELLO",
+    desc: "TEST",
+    extra: ["Str","Str2"],
+}
 
+interface IPostEvenBetter <T extends object> {
+    id: number
+    title: string
+    desc: string
+    extra: T[]
+}
 
-
+const testME2: IPostEvenBetter<IAuthor> = {
+    id: 1,
+    title: "HELLO",
+    desc: "TEST",
+    extra: [{id:1,username:"Mohit"}],
+}
